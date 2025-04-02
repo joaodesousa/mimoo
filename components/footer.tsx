@@ -1,6 +1,7 @@
 import Link from "next/link"
 import { Facebook, Instagram, Twitter } from "lucide-react"
 import BrailleText from "@/components/braille-text"
+import Image from "next/image"
 
 export default function Footer() {
   return (
@@ -87,8 +88,10 @@ export default function Footer() {
           </div>
         </div>
         <div className="mt-12 pt-8 border-t flex flex-col md:flex-row justify-between items-center gap-4">
-          <p className="text-xs text-muted-foreground">© {new Date().getFullYear()} MI.MOO. All rights reserved.</p>
-          <div className="flex gap-6">
+          <div className="flex items-center gap-4">
+            <p className="text-xs text-muted-foreground">© {new Date().getFullYear()} MI.MOO. All rights reserved.</p>
+          </div>
+          <div className="flex gap-6 items-center">
             <Link href="/privacy" className="text-xs text-muted-foreground hover:text-orange-500">
               Política de Privacidade
             </Link>
@@ -98,6 +101,18 @@ export default function Footer() {
             <Link href="/accessibility" className="text-xs text-muted-foreground hover:text-orange-500">
               Acessibilidade
             </Link>
+            <div className="flex items-center gap-2 text-xs text-muted-foreground">
+              <span>Design by</span>
+              <Link href="https://your-design-company.com" className="hover:text-orange-500">
+                <Image 
+                  src="/outplay.png" 
+                  alt="OUTPLAY" 
+                  width={80} 
+                  height={20} 
+                  className="brightness-0 opacity-50 hover:opacity-100 transition-opacity"
+                />
+              </Link>
+            </div>
           </div>
         </div>
       </div>

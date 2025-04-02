@@ -44,10 +44,10 @@ export default function ContactPage() {
             transition={{ duration: 0.8 }}
             className="max-w-3xl mx-auto text-white"
           >
-            <BrailleText text="CONTACT" className="text-lg mb-4" />
-            <h1 className="text-5xl md:text-7xl font-bold tracking-tighter mb-6">Get In Touch</h1>
+            <BrailleText text="CONTACTO" className="text-lg mb-4" />
+            <h1 className="text-5xl md:text-7xl font-bold tracking-tighter mb-6">Entre em Contacto</h1>
             <p className="text-xl font-light mb-8 max-w-2xl mx-auto">
-              We'd love to hear from you. Reach out to the MI.MOO team.
+              Gostaríamos de ouvir a sua opinião. Contacte a equipa MI.MOO.
             </p>
           </motion.div>
         </div>
@@ -67,11 +67,11 @@ export default function ContactPage() {
               <div className="w-12 h-12 rounded-full bg-orange-100 flex items-center justify-center mb-6">
                 <MapPin className="h-6 w-6 text-orange-500" />
               </div>
-              <h3 className="text-xl font-bold mb-4">Visit Us</h3>
+              <h3 className="text-xl font-bold mb-4">Visite-nos</h3>
               <p className="text-muted-foreground mb-2">
-                Rua da Inclusão, 123
+                Rua da MIMOO, 123
                 <br />
-                1000-123 Lisboa
+                4620-000 Lousada
                 <br />
                 Portugal
               </p>
@@ -81,7 +81,7 @@ export default function ContactPage() {
                 rel="noopener noreferrer"
                 className="text-orange-500 hover:underline inline-flex items-center"
               >
-                View on map
+                Ver no mapa
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   width="24"
@@ -110,16 +110,16 @@ export default function ContactPage() {
               <div className="w-12 h-12 rounded-full bg-orange-100 flex items-center justify-center mb-6">
                 <Mail className="h-6 w-6 text-orange-500" />
               </div>
-              <h3 className="text-xl font-bold mb-4">Email Us</h3>
+              <h3 className="text-xl font-bold mb-4">Envie-nos um Email</h3>
               <p className="text-muted-foreground mb-2">
-                General Inquiries:
+                Informações Gerais:
                 <br />
                 <a href="mailto:info@mimoo.com" className="text-orange-500 hover:underline">
                   info@mimoo.com
                 </a>
               </p>
               <p className="text-muted-foreground">
-                Support:
+                Suporte:
                 <br />
                 <a href="mailto:support@mimoo.com" className="text-orange-500 hover:underline">
                   support@mimoo.com
@@ -137,18 +137,18 @@ export default function ContactPage() {
               <div className="w-12 h-12 rounded-full bg-orange-100 flex items-center justify-center mb-6">
                 <Phone className="h-6 w-6 text-orange-500" />
               </div>
-              <h3 className="text-xl font-bold mb-4">Call Us</h3>
+              <h3 className="text-xl font-bold mb-4">Ligue-nos</h3>
               <p className="text-muted-foreground mb-2">
-                Phone:
+                Telefone:
                 <br />
                 <a href="tel:+351123456789" className="text-orange-500 hover:underline">
                   +351 123 456 789
                 </a>
               </p>
               <p className="text-muted-foreground">
-                Hours:
+                Horário:
                 <br />
-                Monday-Friday, 9am-6pm
+                Segunda a Sexta, 9h-18h
               </p>
             </motion.div>
           </div>
@@ -165,16 +165,16 @@ export default function ContactPage() {
           <div className="max-w-5xl mx-auto">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
               <div className="space-y-6">
-                <BrailleText text="MESSAGE" className="text-orange-500" />
-                <h2 className="text-3xl md:text-4xl font-bold tracking-tighter">Send Us a Message</h2>
+                <BrailleText text="MENSAGEM" className="text-orange-500" />
+                <h2 className="text-3xl md:text-4xl font-bold tracking-tighter">Envie-nos uma Mensagem</h2>
                 <div className="w-16 h-1 bg-orange-500"></div>
                 <p className="text-lg text-muted-foreground">
-                  We are committed to making our communication accessible to everyone. If you prefer alternative ways to
-                  get in touch, please let us know.
+                  Estamos comprometidos em tornar a nossa comunicação acessível a todos. Se preferir outras formas de
+                  contacto, por favor, informe-nos.
                 </p>
 
                 <div className="mt-8">
-                  <h3 className="text-xl font-bold mb-4">Follow Us</h3>
+                  <h3 className="text-xl font-bold mb-4">Siga-nos</h3>
                   <div className="flex space-x-4">
                     <a
                       href="https://instagram.com"
@@ -245,24 +245,24 @@ export default function ContactPage() {
                 </div>
 
                 <div className="mt-8 p-6 bg-white rounded-lg shadow-sm">
-                  <h3 className="text-xl font-bold mb-4">Accessibility Options</h3>
-                  <p className="text-muted-foreground mb-4">We offer multiple ways to communicate with us:</p>
+                  <h3 className="text-xl font-bold mb-4">Opções de Acessibilidade</h3>
+                  <p className="text-muted-foreground mb-4">Oferecemos várias formas de comunicar connosco:</p>
                   <ul className="space-y-2">
                     <li className="flex items-center gap-2">
                       <CheckCircle className="h-5 w-5 text-orange-500" />
-                      <span>Braille correspondence</span>
+                      <span>Correspondência em Braille</span>
                     </li>
                     <li className="flex items-center gap-2">
                       <CheckCircle className="h-5 w-5 text-orange-500" />
-                      <span>Video calls with sign language</span>
+                      <span>Videoconferências com língua gestual</span>
                     </li>
                     <li className="flex items-center gap-2">
                       <CheckCircle className="h-5 w-5 text-orange-500" />
-                      <span>Voice messages</span>
+                      <span>Mensagens de voz</span>
                     </li>
                     <li className="flex items-center gap-2">
                       <CheckCircle className="h-5 w-5 text-orange-500" />
-                      <span>In-person meetings</span>
+                      <span>Reuniões presenciais</span>
                     </li>
                   </ul>
                 </div>
@@ -278,12 +278,12 @@ export default function ContactPage() {
                     <div className="w-16 h-16 rounded-full bg-green-100 flex items-center justify-center mb-6">
                       <CheckCircle className="h-8 w-8 text-green-600" />
                     </div>
-                    <h3 className="text-2xl font-bold mb-2">Message Sent!</h3>
+                    <h3 className="text-2xl font-bold mb-2">Mensagem Enviada!</h3>
                     <p className="text-muted-foreground mb-6">
-                      Thank you for reaching out. We'll get back to you as soon as possible.
+                      Obrigado pelo seu contacto. Responderemos assim que possível.
                     </p>
                     <Button onClick={() => setFormSubmitted(false)} variant="outline" className="rounded-full">
-                      Send Another Message
+                      Enviar Outra Mensagem
                     </Button>
                   </motion.div>
                 ) : (
@@ -291,24 +291,24 @@ export default function ContactPage() {
                     <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
                       <div className="space-y-2">
                         <label htmlFor="first-name" className="text-sm font-medium flex items-center gap-2">
-                          <span>First Name</span>
-                          <BrailleText text="F" className="text-xs text-orange-500" />
+                          <span>Nome</span>
+                          <BrailleText text="N" className="text-xs text-orange-500" />
                         </label>
                         <Input
                           id="first-name"
-                          placeholder="Enter your first name"
+                          placeholder="Insira o seu nome"
                           className="rounded-md focus:border-orange-500 focus:ring focus:ring-orange-500/20"
                           required
                         />
                       </div>
                       <div className="space-y-2">
                         <label htmlFor="last-name" className="text-sm font-medium flex items-center gap-2">
-                          <span>Last Name</span>
-                          <BrailleText text="L" className="text-xs text-orange-500" />
+                          <span>Apelido</span>
+                          <BrailleText text="A" className="text-xs text-orange-500" />
                         </label>
                         <Input
                           id="last-name"
-                          placeholder="Enter your last name"
+                          placeholder="Insira o seu apelido"
                           className="rounded-md focus:border-orange-500 focus:ring focus:ring-orange-500/20"
                           required
                         />
@@ -323,7 +323,7 @@ export default function ContactPage() {
                       <Input
                         id="email"
                         type="email"
-                        placeholder="Enter your email"
+                        placeholder="Insira o seu email"
                         className="rounded-md focus:border-orange-500 focus:ring focus:ring-orange-500/20"
                         required
                       />
@@ -331,12 +331,12 @@ export default function ContactPage() {
 
                     <div className="space-y-2">
                       <label htmlFor="subject" className="text-sm font-medium flex items-center gap-2">
-                        <span>Subject</span>
-                        <BrailleText text="S" className="text-xs text-orange-500" />
+                        <span>Assunto</span>
+                        <BrailleText text="A" className="text-xs text-orange-500" />
                       </label>
                       <Input
                         id="subject"
-                        placeholder="Enter subject"
+                        placeholder="Insira o assunto"
                         className="rounded-md focus:border-orange-500 focus:ring focus:ring-orange-500/20"
                         required
                       />
@@ -344,12 +344,12 @@ export default function ContactPage() {
 
                     <div className="space-y-2">
                       <label htmlFor="message" className="text-sm font-medium flex items-center gap-2">
-                        <span>Message</span>
+                        <span>Mensagem</span>
                         <BrailleText text="M" className="text-xs text-orange-500" />
                       </label>
                       <Textarea
                         id="message"
-                        placeholder="Enter your message"
+                        placeholder="Insira a sua mensagem"
                         rows={5}
                         className="rounded-md focus:border-orange-500 focus:ring focus:ring-orange-500/20"
                         required
@@ -358,7 +358,7 @@ export default function ContactPage() {
 
                     <div className="space-y-2">
                       <label className="text-sm font-medium flex items-center gap-2">
-                        <span>Preferred Contact Method</span>
+                        <span>Método de Contacto Preferido</span>
                       </label>
                       <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
                         <label className="flex items-center space-x-2">
@@ -372,7 +372,7 @@ export default function ContactPage() {
                         </label>
                         <label className="flex items-center space-x-2">
                           <input type="radio" name="contact-method" className="text-orange-500 focus:ring-orange-500" />
-                          <span>Phone</span>
+                          <span>Telefone</span>
                         </label>
                       </div>
                     </div>
@@ -382,7 +382,7 @@ export default function ContactPage() {
                       className="w-full rounded-full bg-orange-500 hover:bg-orange-600 flex items-center justify-center gap-2"
                     >
                       <Send className="h-4 w-4" />
-                      Send Message
+                      Enviar Mensagem
                     </Button>
                   </form>
                 )}
@@ -396,8 +396,8 @@ export default function ContactPage() {
       <section className="h-[400px] relative">
         <div className="absolute inset-0 bg-stone-200 flex items-center justify-center">
           <div className="text-center">
-            <p className="text-muted-foreground mb-2">Interactive Map</p>
-            <p className="text-sm text-muted-foreground">(This would be an embedded Google Map in production)</p>
+            <p className="text-muted-foreground mb-2">Mapa Interativo</p>
+            <p className="text-sm text-muted-foreground">(Este seria um mapa do Google Maps incorporado em produção)</p>
           </div>
         </div>
       </section>

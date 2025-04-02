@@ -10,11 +10,13 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
 import BrailleText from "@/components/braille-text"
 import { ScrollArea, ScrollBar } from "@/components/ui/scroll-area"
 import ProductCard from "@/components/product-card"
+import { useCart } from "@/components/cart-context"
 
 export default function ProductDetailsPage() {
   const [quantity, setQuantity] = useState(1)
   const [selectedSize, setSelectedSize] = useState<string | null>(null)
   const [activeImage, setActiveImage] = useState(0)
+  const { addToCart } = useCart()
 
   // Sample product data
   const product = {
@@ -62,6 +64,17 @@ export default function ProductDetailsPage() {
 
   const handleSizeSelect = (size: string) => {
     setSelectedSize(size)
+  }
+
+  const handleAddToCart = () => {
+    if (!selectedSize || !product.inStock) return
+
+    addToCart({
+      id: product.id,
+      name: product.name,
+      price: product.price,
+      image: product.images[0],
+    })
   }
 
   return (
@@ -219,6 +232,7 @@ export default function ProductDetailsPage() {
             <Button
               className="flex-1 gap-2 bg-orange-500 hover:bg-orange-600"
               disabled={!selectedSize || !product.inStock}
+              onClick={handleAddToCart}
             >
               <ShoppingBag className="h-4 w-4" />
               Adicionar ao Carrinho

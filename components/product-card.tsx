@@ -1,15 +1,29 @@
+"use client"
 import Image from "next/image"
 import Link from "next/link"
 import { Heart, ShoppingCart } from "lucide-react"
 import { Button } from "@/components/ui/button"
+import { useCart } from "./cart-context"
 
 interface ProductCardProps {
+  id: number
   image: string
   name: string
   price: string
 }
 
-export default function ProductCard({ image, name, price }: ProductCardProps) {
+export default function ProductCard({ id, image, name, price }: ProductCardProps) {
+  const { addToCart } = useCart()
+
+  const handleAddToCart = () => {
+    addToCart({
+      id,
+      name,
+      price,
+      image,
+    })
+  }
+
   return (
     <div className="min-w-[250px] max-w-sm group">
       <div className="relative aspect-square overflow-hidden rounded-lg">
@@ -26,7 +40,11 @@ export default function ProductCard({ image, name, price }: ProductCardProps) {
               <Heart className="h-5 w-5" />
               <span className="sr-only">Add to wishlist</span>
             </Button>
-            <Button size="icon" className="rounded-full h-10 w-10 bg-orange-500 hover:bg-orange-600">
+            <Button 
+              size="icon" 
+              className="rounded-full h-10 w-10 bg-orange-500 hover:bg-orange-600"
+              onClick={handleAddToCart}
+            >
               <ShoppingCart className="h-5 w-5" />
               <span className="sr-only">Add to cart</span>
             </Button>

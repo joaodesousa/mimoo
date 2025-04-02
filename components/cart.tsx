@@ -46,14 +46,14 @@ export const CartDrawer = ({
   }, [cartItems])
 
   return (
-    <Sheet open={isOpen} onOpenChange={onClose}>
-      <SheetContent className="w-full sm:max-w-md flex flex-col p-0 right-0">
+    <Sheet open={isOpen} onOpenChange={onClose} >
+      <SheetContent className="w-full sm:max-w-md flex flex-col p-0 right-0" hideCloseButton>
         <SheetHeader className="px-4 py-4 border-b">
           <div className="flex items-center justify-between">
             <SheetTitle className="font-medium flex items-center gap-2">
               <ShoppingBag className="h-5 w-5 text-orange-500" />
-              <span>Your Cart</span>
-              <BrailleText text="CART" className="text-xs text-orange-500 ml-2" />
+              <span>Carrinho</span>
+              <BrailleText text="Carrinho" className="text-xs text-orange-500 ml-2" />
             </SheetTitle>
             <Button variant="ghost" size="icon" onClick={onClose} className="rounded-full">
               <X className="h-4 w-4" />
@@ -67,10 +67,10 @@ export const CartDrawer = ({
             <div className="rounded-full bg-stone-100 p-3 mb-4">
               <ShoppingBag className="h-6 w-6 text-stone-400" />
             </div>
-            <h3 className="text-lg font-medium mb-2">Your cart is empty</h3>
-            <p className="text-muted-foreground text-sm mb-6">Add items to your cart to see them here.</p>
+            <h3 className="text-lg font-medium mb-2">Carrinho vazio</h3>
+            <p className="text-muted-foreground text-sm mb-6">Adiciona artigos para os veres aqui.</p>
             <Button className="rounded-full bg-orange-500 hover:bg-orange-600" onClick={onClose}>
-              Continue Shopping
+              Continuar a comprar
             </Button>
           </div>
         ) : (
@@ -99,7 +99,7 @@ export const CartDrawer = ({
                           disabled={item.quantity <= 1}
                         >
                           <MinusCircle className="h-4 w-4" />
-                          <span className="sr-only">Decrease quantity</span>
+                          <span className="sr-only">Diminuir Quantidade</span>
                         </Button>
                         <span className="mx-2 min-w-8 text-center">{item.quantity}</span>
                         <Button
@@ -109,7 +109,7 @@ export const CartDrawer = ({
                           onClick={() => onUpdateQuantity(item.id, item.quantity + 1)}
                         >
                           <PlusCircle className="h-4 w-4" />
-                          <span className="sr-only">Increase quantity</span>
+                          <span className="sr-only">Aumentar Quantidade</span>
                         </Button>
                       </div>
                     </div>
@@ -120,7 +120,7 @@ export const CartDrawer = ({
                       onClick={() => onRemoveItem(item.id)}
                     >
                       <Trash2 className="h-4 w-4" />
-                      <span className="sr-only">Remove item</span>
+                      <span className="sr-only">Remover item</span>
                     </Button>
                   </div>
                 ))}
@@ -134,8 +134,8 @@ export const CartDrawer = ({
                   <span>{subtotal}</span>
                 </div>
                 <div className="flex justify-between text-sm text-muted-foreground">
-                  <span>Shipping:</span>
-                  <span>Calculated at checkout</span>
+                  <span>Envio:</span>
+                  <span>Calculado no checkout</span>
                 </div>
                 <div className="border-t pt-4 flex justify-between font-medium">
                   <span>Total:</span>
@@ -152,7 +152,7 @@ export const CartDrawer = ({
                   className="w-full rounded-full"
                   onClick={onClose}
                 >
-                  Continue Shopping
+                  Continuar a comprar
                 </Button>
               </SheetFooter>
             </div>
