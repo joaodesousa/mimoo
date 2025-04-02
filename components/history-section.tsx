@@ -18,7 +18,7 @@ export default function OurHistorySection() {
       alt: "MI.MOO tote bag",
     },
     {
-      title: "A Ponte",
+      title: "O Ponto",
       description:
         "O ponto em MI.MOO realça as diferenças como uma ponte e não como uma barreira, ligando os mundos visual e tátil.",
       image: "/images/packaging.png",
@@ -29,7 +29,6 @@ export default function OurHistorySection() {
       description: "Estamos empenhados em tornar a moda acessível a todos, garantindo a inclusão em cada ponto.",
       image: "/images/tshirt-collab.png",
       alt: "MI.MOO collaboration",
-      overlay: "OLHOS QUE NÃO VEEM, INCLUSÃO QUE SE SENTE",
     },
   ]
 
@@ -141,13 +140,6 @@ export default function OurHistorySection() {
                     fill
                     className="object-cover"
                   />
-                  {historyPoints[activeIndex].overlay && (
-                    <div className="absolute inset-0 flex items-center justify-center">
-                      <p className="text-white text-xl font-bold px-4 py-2 bg-black/50 rounded">
-                        {historyPoints[activeIndex].overlay}
-                      </p>
-                    </div>
-                  )}
                 </div>
               </div>
             </motion.div>

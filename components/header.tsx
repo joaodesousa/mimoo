@@ -2,17 +2,21 @@
 
 import { useState, useEffect } from "react"
 import Link from "next/link"
-import { Menu, ShoppingBag, X } from 'lucide-react'
+import { Menu, X } from 'lucide-react'
 import { Button } from "@/components/ui/button"
 import { Sheet, SheetContent, SheetTitle, SheetTrigger } from "@/components/ui/sheet"
 import { usePathname } from "next/navigation"
 import BrailleText from "@/components/braille-text"
 import { motion } from "framer-motion"
+import { CartButton } from "./cart-button"
+import { CartDrawer } from "./cart"
+import { CartProvider, useCart } from "./cart-context"
 
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
   const [scrolled, setScrolled] = useState(false)
   const pathname = usePathname()
+  const { isCartOpen, closeCart, cartItems, updateQuantity, removeFromCart } = useCart()
 
   const routes = [
     { href: "/", label: "Home", braille: "H" },
@@ -103,16 +107,18 @@ export default function Header() {
         </nav>
 
         <div className="flex items-center">
-          <Link
-            href="/cart"
-            className="inline-flex items-center justify-center text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring"
-            aria-label="Shopping cart"
-          >
-            <ShoppingBag className="h-5 w-5" />
-            <span className="sr-only">Shopping cart</span>
-          </Link>
+          <CartButton />
         </div>
       </div>
+
+      {/* Cart Drawer */}
+      <CartDrawer 
+        isOpen={isCartOpen}
+        onClose={closeCart}
+        cartItems={cartItems}
+        onUpdateQuantity={updateQuantity}
+        onRemoveItem={removeFromCart}
+      />
     </header>
   )
 }
@@ -265,10 +271,7 @@ function MobileMenu({
               </div>
               <div className="flex justify-between items-center">
                 <p className="text-xs text-muted-foreground">© {new Date().getFullYear()} MI.MOO</p>
-                <Link href="/cart" className="inline-flex items-center text-sm">
-                  <ShoppingBag className="h-4 w-4 mr-1" />
-                  <span>Cart</span>
-                </Link>
+                <CartButton />
               </div>
             </div>
           </div>
