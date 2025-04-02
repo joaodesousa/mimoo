@@ -17,7 +17,7 @@ export default function Footer() {
             </p>
           </div>
           <div>
-            <h3 className="text-sm font-medium mb-4">Shop</h3>
+            <h3 className="text-sm font-medium mb-4">Loja</h3>
             <ul className="space-y-3">
               <li>
                 <Link href="/shop/tshirts" className="text-sm text-muted-foreground hover:text-orange-500">
@@ -25,49 +25,34 @@ export default function Footer() {
                 </Link>
               </li>
               <li>
-                <Link href="/shop/accessories" className="text-sm text-muted-foreground hover:text-orange-500">
-                  Accessories
-                </Link>
-              </li>
-              <li>
                 <Link href="/shop/collaborations" className="text-sm text-muted-foreground hover:text-orange-500">
-                  Collaborations
-                </Link>
-              </li>
-              <li>
-                <Link href="/shop/gift-cards" className="text-sm text-muted-foreground hover:text-orange-500">
-                  Gift Cards
+                  Colaborações
                 </Link>
               </li>
             </ul>
           </div>
           <div>
-            <h3 className="text-sm font-medium mb-4">Company</h3>
+            <h3 className="text-sm font-medium mb-4">Nós</h3>
             <ul className="space-y-3">
               <li>
                 <Link href="/about" className="text-sm text-muted-foreground hover:text-orange-500">
-                  About Us
+                  Sobre Nós
                 </Link>
               </li>
               <li>
                 <Link href="/mission" className="text-sm text-muted-foreground hover:text-orange-500">
-                  Our Mission
-                </Link>
-              </li>
-              <li>
-                <Link href="/sustainability" className="text-sm text-muted-foreground hover:text-orange-500">
-                  Sustainability
+                  Missão
                 </Link>
               </li>
               <li>
                 <Link href="/contact" className="text-sm text-muted-foreground hover:text-orange-500">
-                  Contact
+                  Contacto
                 </Link>
               </li>
             </ul>
           </div>
           <div>
-            <h3 className="text-sm font-medium mb-4">Connect</h3>
+            <h3 className="text-sm font-medium mb-4">Social</h3>
             <div className="flex space-x-4">
               <Link href="https://instagram.com" className="text-muted-foreground hover:text-orange-500">
                 <Instagram className="h-5 w-5" />
@@ -105,13 +90,13 @@ export default function Footer() {
           <p className="text-xs text-muted-foreground">© {new Date().getFullYear()} MI.MOO. All rights reserved.</p>
           <div className="flex gap-6">
             <Link href="/privacy" className="text-xs text-muted-foreground hover:text-orange-500">
-              Privacy Policy
+              Política de Privacidade
             </Link>
             <Link href="/terms" className="text-xs text-muted-foreground hover:text-orange-500">
-              Terms of Service
+              Termos de Serviço
             </Link>
             <Link href="/accessibility" className="text-xs text-muted-foreground hover:text-orange-500">
-              Accessibility
+              Acessibilidade
             </Link>
           </div>
         </div>

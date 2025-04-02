@@ -60,17 +60,6 @@ export default function ProductShowcase() {
         </div>
 
       <div className="container px-4 md:px-6 relative z-10">
-        <div className="flex flex-col md:flex-row md:items-end justify-between mb-10">
-          <div>
-            <h2 className="text-3xl font-bold tracking-tighter mb-3">Sente A Nossa Coleção</h2>
-            <BrailleText text="Sente A Nossa Coleção" className="text-sm text-orange-500 pb-2" />
-            <div className="w-16 h-1 bg-orange-500 mb-4"></div>
-          </div>
-          <Link href="/shop" className="group inline-flex items-center mt-4 md:mt-0">
-            <span className="text-sm font-medium mr-2">Ver Todos os Produtos</span>
-            <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
-          </Link>
-        </div>
 
         {/* Simple Product Grid */}
         <div className="grid grid-cols-2 md:grid-cols-4 gap-6 md:gap-8">

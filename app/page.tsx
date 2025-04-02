@@ -58,7 +58,7 @@ export default function Home() {
                       id="first-name"
                       type="text"
                       className="w-full px-4 py-3 border border-input rounded-full focus:border-orange-500 focus:ring focus:ring-orange-500/20 transition-all"
-                      placeholder="Your first name"
+                      placeholder="Nome"
                     />
                   </div>
                   <div className="space-y-2">
@@ -70,7 +70,7 @@ export default function Home() {
                       id="last-name"
                       type="text"
                       className="w-full px-4 py-3 border border-input rounded-full focus:border-orange-500 focus:ring focus:ring-orange-500/20 transition-all"
-                      placeholder="Your last name"
+                      placeholder="Apelido"
                     />
                   </div>
                 </div>
@@ -84,7 +84,7 @@ export default function Home() {
                     id="email"
                     type="email"
                     className="w-full px-4 py-3 border border-input rounded-full focus:border-orange-500 focus:ring focus:ring-orange-500/20 transition-all"
-                    placeholder="Your email address"
+                    placeholder="Email"
                     required
                   />
                 </div>
